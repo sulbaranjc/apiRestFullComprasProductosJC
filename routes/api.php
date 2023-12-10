@@ -23,6 +23,6 @@ use App\Http\Controllers\CompraController;
 // });
 
 Route::resource('marcas', MarcaController::class);
-Route::resource('categorias', CategoriaController::class);
+Route::apiResource('categorias', CategoriaController::class);
 Route::resource('productos', ProductoController::class);
 Route::resource('compras', CompraController::class);
