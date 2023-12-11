@@ -14,7 +14,7 @@ class ApiResponse
         ], $statusCode);
     }
 
-    public static function error($message = 'Error', $statusCode,$data=[])
+    public static function error($statusCode, $message = 'Error', $data = [])
     {
         return response()->json([
             'message' => $message,
