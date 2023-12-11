@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Categoria;
+use App\Models\Categoria;
 use App\Http\Responses\ApiResponse;
 use Exception;
 use Illuminate\Validation\Rule;

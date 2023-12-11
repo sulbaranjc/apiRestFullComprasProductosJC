@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\models\Marca;
+use App\Models\Marca;
 use App\Http\Responses\ApiResponse;
 use Exception;
 use Illuminate\Validation\Rule;
