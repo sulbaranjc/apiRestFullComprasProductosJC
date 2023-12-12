@@ -84,6 +84,14 @@ class MarcaController extends Controller
 
     public function productosPorMarca($id)
     {
-        # code
+        try {
+            $marca = Marca::with('productos')->findOrFail($id);
+            return ApiResponse::success('Marca y lista de productos', 200, $marca);
+        } catch (ModelNotFoundException $e) {
+            return ApiResponse::error('Marca no encontrada', 404);
+        }
+            # code
     }
 }
+
+
