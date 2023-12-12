@@ -26,3 +26,5 @@ Route::apiResource('marcas', MarcaController::class);
 Route::apiResource('categorias', CategoriaController::class);
 Route::apiResource('productos', ProductoController::class);
 Route::apiResource('compras', CompraController::class);
+
+Route::get('categorias/{categoria}/productos', [CategoriaController::class, 'productosPorCategoria']);
