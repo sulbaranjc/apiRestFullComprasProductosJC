@@ -28,7 +28,7 @@ class MarcaController extends Controller
     {
         try {
             $request->validate([
-                'nombre' => 'required|unique:Marcas|string|max:255'
+                'nombre' => 'required|unique:marcas|string|max:255'
             ]);
 
             $marca = Marca::create($request->all());
@@ -57,7 +57,7 @@ class MarcaController extends Controller
         try {
             $marca = Marca::findOrFail($id);
             $request->validate([
-                'nombre' => ['required', Rule::unique('Marcas')->ignore($marca)]
+                'nombre' => ['required', Rule::unique('marcas')->ignore($marca)]
             ]);
             $marca->update($request->all());
             return ApiResponse::success('Categoría actualizada exitosamente', 200, $marca);
